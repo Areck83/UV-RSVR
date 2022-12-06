@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html lang="es">
+  <!--Estilos propios y bootstrap, javascript, cabecita de la pagina-->
+<head>
+  <title>Crear Nota - UVRSVR</title>
+  <!--Metadatos para la visualizacion-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--Estilos-->
+  <link rel="stylesheet" type="text/css" href="js/alertify/css/alertify.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/estylereser.css"/>
+  <link rel="stylesheet" type="text/css" href="js/alertify/css/themes/default.min.css"/>
+  <style>
+    html{font-size:16pt;}
+    .fondo {background:#D0D1E6;}
+    .white{color:#ffff;}
+    .negro{color:#000;}
+    .fondito {background:#020818;}
+    .borde{border: 1px #000 solid;}
+    .texto{ padding-top:5px;
+    margin-left:50px;}
+    .fondos {background:#142E45;}
+    .fondotitle{ background:url(img/Office.jpg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    }
+  </style>
+  <!--Alertify-->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/alertify/alertify.min.js"></script>
+  <!--Jquery y el bootstrap en linea por si acaso-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script>
+      window.onload = function(){
+         alertify.success('Crear Nota');
+      }
+  </script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="css-index/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+</head>
+
+<body style="background-color:#000D1D;">
+  <!--Parte principal de la pagina con la imagen-->
+  <section class="container-fluid d-flex fondotitle justify-content-center align-items-center">
+    <h1 class="display-1 black">UVRSVR</h1>
+  </section>
+  <!--Menu expandible responsivo-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">UVRSVR</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="index.html">Inicio</a>
+        <a class="nav-item nav-link active" href="notas.html">Crear Nota<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="salones.html">Salones</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Parte centrada principal de la pagina-->
+  <div class="container">
+    <div class="row">
+        <div class="d-none contenedor-logo-padre d-sm-block col-md-12 col-xl-4 fondo text-white-50">
+            <div class="contenedor-logo d-none d-sm-block">
+                <img class='img-thumbnail' alt ="Logo de la Universidad Veracruzana" src="img/LogoUV.png">
+            </div>
+        </div>
+      <div class="col-sm-12 col-md-12 col-sg-8 col-xl-8 fondos">
+        <form class="form-register" action="" method="post" enctype="multipart/form-data">
+          <h2>Crear Nota</h2>
+            <div class="contenedor-inputs">
+
+              <p class = "prro">Sus datos</p>
+
+              <input id="idNombre" type="text" name="idNombre" autocomplete="off" placeholder="Nombre" class="input-30" size="60" maxlength="60"/> <br/>
+              <input id="idMatricula" type="text" name="idMatricula" autocomplete="off" placeholder="Matricula" class="input-30" size="60" maxlength="60"/> <br/>
+              <select name="accion" id="accion" class="input-30b">
+                <option selected value="0">Accion</option>
+                <option value="Solicitar">Solicitar</option>
+                <option value="Desocupar">Desocupar</option>
+              </select>
+
+              <p class="prro">Información aula</p>
+
+              <label>Salon</label>
+              <label>Hora Actual</label> <br/>
+              <select name="salon" id="salon" class="input-30b">
+                <option selected value="0">Salon</option>
+                <option value="105">105</option>
+                <option value="106">106</option>
+                <option value="205">205</option>
+                <option value="206">206</option>
+              </select>
+              <!-- <input type="text" id="salon" name="salon" autocomplete="off" class="input-30" size="60" placeholder="Salon o Módulo"/> -->
+              <label id ="horaActual"></label>
+              <script type="text/javascript">
+                var today = new Date();
+                var day = today.getDay();
+                var daylist = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
+                var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+                var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                var dateTime = date+' '+time;
+                 
+                document.getElementById("horaActual").innerHTML = dateTime + ' <br> Dia :' + daylist[day];
+               
+                </script>
+              <p class="prro">Nota</p>
+
+              <input id="nota" type="text" name="nota" autocomplete="off" placeholder="Agregue información adicional útil" class="input-50" size="10" maxlength="6"/>
+
+              <input type="submit" value="Guardar" name="BtnGuardar" class="btn-enviar"/>
+            </div>
+            </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer font-small pt-4 mt-4 fondito">
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+      <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+          <!-- Content -->
+          <h5 class="text-uppercase">Información</h5>
+          <ul class="list-unstyled text-white-50">
+            <li>Docente: Jose Rafael Rojano Caceres</li>
+            <li>Experiencia Educativa: Tecnologías WEB</li>
+            <li>Integrantes: Alfredo Issac Ramirez Gonzalez, Andrés Zárate Rodriguez</li>
+            <li>Carrera: Tecnologías Computacionales</li>
+            <li>Universidad Veracruzana. Facultad de Estadística e Informática. 2022</li>
+          </ul>
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <!-- Grid column -->
+        <div class="col-md-6 mb-md-0 mb-3">
+          <!-- Links -->
+          <h5 class="text-uppercase">Contáctanos</h5>
+            <ul class="list-unstyled text-white-50">
+              <li>Número: 228XXXXXXX</li>
+              <li>Correos: zs20018225@estudiantes.uv.mx </li>
+            </ul>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+    <!-- Footer Links -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">2022
+    <!-- <a class="cierre" href="cerrarSes.php">Cerrar Sesión</a> -->
+    </div>
+    <!-- Copyright -->
+  </footer>
+</body>
+</html>

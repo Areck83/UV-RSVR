@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html lang="es">
+  <!--Estilos propios y bootstrap, javascript, cabecita de la pagina-->
+<head>
+  <title>Inicio - UVRSVR</title>
+  <!--Metadatos para la visualizacion-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--Estilos-->
+  <link rel="stylesheet" type="text/css" href="js/alertify/css/alertify.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/estylereser.css"/>
+  <link rel="stylesheet" type="text/css" href="js/alertify/css/themes/default.min.css"/>
+  <style>
+    html{font-size:16pt;}
+    .fondo {background:#D0D1E6;}
+    .white{color:#ffff;}
+    .negro{color:#000;}
+    .fondito {background:#020818;}
+    .borde{border: 1px #000 solid;}
+    .texto{ padding-top:5px;
+    margin-left:50px;}
+    .fondos {background:#142E45;}
+    .fondotitle{ background:url(img/Office.jpg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    }
+  </style>
+  <!--Alertify-->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/alertify/alertify.min.js"></script>
+  <!--Jquery y el bootstrap en linea por si acaso-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script>
+      window.onload = function(){
+         alertify.success('Bienvenido');
+      }
+  </script>
+  <!-- <script type="text/javascript">
+    $(".cierre").click(function(){
+      alertify.message('Sesión cerrada');
+    });
+  </script> -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="css-index/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+</head>
+
+<body style="background-color:#000D1D;">
+  <!--Parte principal de la pagina con la imagen-->
+  <section class="container-fluid d-flex fondotitle justify-content-center align-items-center">
+    <h1 class="display-1 black">UVRSVR</h1>
+  </section>
+  <!--Menu expandible responsivo-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">UVRSVR</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="index.html">Inicio</a>
+        <a class="nav-item nav-link" href="nota.html">Crear Nota</a>
+        <a class="nav-item nav-link active" href="salones.html">Salones<span class="sr-only">(current)</span></a>
+      </div>
+    </div>
+  </nav>
+  <!-- Parte centrada principal de la pagina-->
+  <div class="container">
+    <div class="row">
+      <div class="d-none contenedor-logo-padre d-sm-block col-md-12 col-xl-4 fondo text-white-50">
+        <div class="contenedor-logo d-none d-sm-block">
+            <img class='img-thumbnail' alt ="Logo de la Universidad Veracruzana" src="img/LogoUV.png">
+        </div>
+    </div>
+      <div class="col-sm-6 col-md-8 col-sg-8 fondos">
+        <table align="center" width="100%" BGCOLOR="#20B2AA">
+          <h3 style="text-align:center; color:white">Notas de los demas alumnos</h3>
+                    <tr BGCOLOR="#055b5b">
+                      <th><font color="white">Nombre</font></th><th style="text-align:center"><font color="white">Fecha</font></th><th><font color="white">Salon</font></th>
+                    </tr>
+                    <tr>
+                      <th colspan="3" BGCOLOR="#008B8B">Ocupados</th>
+                    </tr>
+                    <tr >
+                      <td><font color="white">X</font></td><td align="center"><font color="white">2022-06-05</font></td><td align="center"><font color="white">106</font></td>
+                    </tr>
+                    <tr >
+                      <td><font color="white">X</font></td><td align="center"><font color="white">2022-01-22</font></td><td align="center"><font color="white">105</font></td>
+                    </tr>
+                    <tr>
+                      <th colspan="3" BGCOLOR="#008B8B">Desocupados</th></tr>
+                    <tr>
+                      <td ><font color="white">Z</font></td><td align="center"><font color="white">2022-04-03</font></td><td align="center"><font color="white">205</font></td>
+                    </tr>
+                    <tr>
+                      <td ><font color="white">Z</font></td><td align="center"><font color="white">2022-04-05</font></td><td align="center"><font color="white">404</font></td>
+                    </tr>
+                    <tr>
+                    </table>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer font-small pt-4 mt-4 fondito">
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+      <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+          <!-- Content -->
+          <h5 class="text-uppercase">Información</h5>
+          <ul class="list-unstyled text-white-50">
+            <li>Docente: Jose Rafael Rojano Caceres</li>
+            <li>Experiencia Educativa: Tecnologías WEB</li>
+            <li>Integrantes: Alfredo Issac Ramirez Gonzalez, Andrés Zárate Rodriguez</li>
+            <li>Carrera: Tecnologías Computacionales</li>
+            <li>Universidad Veracruzana. Facultad de Estadística e Informática. 2022</li>
+          </ul>
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <!-- Grid column -->
+        <div class="col-md-6 mb-md-0 mb-3">
+          <!-- Links -->
+          <h5 class="text-uppercase">Contáctanos</h5>
+            <ul class="list-unstyled text-white-50">
+              <li>Número: 228XXXXXXX</li>
+              <li>Correos: zs20018225@estudiantes.uv.mx </li>
+            </ul>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+    <!-- Footer Links -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">2022
+    <!-- <a class="cierre" href="cerrarSes.php">Cerrar Sesión</a> -->
+    </div>
+    <!-- Copyright -->
+  </footer>
+</body>
+</html>
