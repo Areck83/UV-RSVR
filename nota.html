@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="js/alertify/css/alertify.min.css"/>
   <link rel="stylesheet" type="text/css" href="css/estylereser.css"/>
   <link rel="stylesheet" type="text/css" href="js/alertify/css/themes/default.min.css"/>
+  <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Logo_de_la_Universidad_Veracruzana.svg/1200px-Logo_de_la_Universidad_Veracruzana.svg.png">
   <style>
     html{font-size:16pt;}
     .fondo {background:#D0D1E6;}
@@ -47,7 +48,7 @@
 <body style="background-color:#000D1D;">
   <!--Parte principal de la pagina con la imagen-->
   <section class="container-fluid d-flex fondotitle justify-content-center align-items-center">
-    <h1 class="display-1 black">UVRSVR</h1>
+    <h1 class="display-1 white">UVRSVR</h1>
   </section>
   <!--Menu expandible responsivo-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -57,9 +58,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" href="index.html">Inicio</a>
-        <a class="nav-item nav-link active" href="notas.html">Crear Nota<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="salones.html">Salones</a>
+        <a class="nav-item nav-link" href="index.html" tabindex="1">Inicio</a>
+        <a class="nav-item nav-link active" href="notas.html" tabindex="2">Crear Nota<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="salones.html" tabindex="3">Salones</a>
       </div>
     </div>
   </nav>
@@ -73,32 +74,33 @@
         </div>
       <div class="col-sm-12 col-md-12 col-sg-8 col-xl-8 fondos">
         <form class="form-register" action="" method="post" enctype="multipart/form-data">
-          <h2>Crear Nota</h2>
+          <h2 tabindex="4">Crear Nota</h2>
             <div class="contenedor-inputs">
 
-              <p class = "prro">Sus datos</p>
-
-              <input id="idNombre" type="text" name="idNombre" autocomplete="off" placeholder="Nombre" class="input-30" size="60" maxlength="60"/> <br/>
-              <input id="idMatricula" type="text" name="idMatricula" autocomplete="off" placeholder="Matricula" class="input-30" size="60" maxlength="60"/> <br/>
-              <select name="accion" id="accion" class="input-30b">
+              <h3 class = "prro" tabindex="5">Sus datos</h3>
+              <label class="white col-xl-12 col-md-12" tabindex="6">Nombre</label>
+              <input id="idNombre" type="text" name="idNombre" autocomplete="off" placeholder="Nombre" class="input-30 col-xl-12 col-md-12" size="60" maxlength="60" tabindex="7"/> <br/>
+              <label class="col-xl-12 col-md-12" tabindex="8">Matricula</label>
+              <input tabindex="9" id="idMatricula" type="text" name="idMatricula" autocomplete="off" placeholder="Matricula" class="col-xl-12 input-30 col-md-12" size="60" maxlength="60"/> <br/>
+              <label tabindex="10" class="col-md-12 col-xl-12">Accion</label>
+              <select tabindex="11" name="accion" id="accion" class="col-xl-12 col-md-12">
                 <option selected value="0">Accion</option>
                 <option value="Solicitar">Solicitar</option>
                 <option value="Desocupar">Desocupar</option>
               </select>
 
-              <p class="prro">Información aula</p>
+              <h3 tabindex="12" class="prro">Información aula</h3>
 
-              <label>Salon</label>
-              <label>Hora Actual</label> <br/>
-              <select name="salon" id="salon" class="input-30b">
+              <label tabindex="13" class="col-xl-12 col-md-12" >Salon</label>
+              <select tabindex="14" name="salon" id="salon" class="col-xl-12 col-md-12">
                 <option selected value="0">Salon</option>
                 <option value="105">105</option>
                 <option value="106">106</option>
                 <option value="205">205</option>
                 <option value="206">206</option>
               </select>
-              <!-- <input type="text" id="salon" name="salon" autocomplete="off" class="input-30" size="60" placeholder="Salon o Módulo"/> -->
-              <label id ="horaActual"></label>
+              <label tabindex="15" class="col-xl-12 col-md-12" >Hora Actual</label> <br/>
+              <label tabindex="16" id="horaActual" class="col-xl-12 col-md-12"></label>
               <script type="text/javascript">
                 var today = new Date();
                 var day = today.getDay();
@@ -110,11 +112,13 @@
                 document.getElementById("horaActual").innerHTML = dateTime + ' <br> Dia :' + daylist[day];
                
                 </script>
-              <p class="prro">Nota</p>
-
-              <input id="nota" type="text" name="nota" autocomplete="off" placeholder="Agregue información adicional útil" class="input-50" size="10" maxlength="6"/>
-
-              <input type="submit" value="Guardar" name="BtnGuardar" class="btn-enviar"/>
+              <!-- <input type="text" id="salon" name="salon" autocomplete="off" class="input-30" size="60" placeholder="Salon o Módulo"/> -->
+              
+              
+              <h3 tabindex="17" class="prro">Nota</h3>
+              <label tabindex="18" class="col-xl-12 col-md-12">Ingresar solicitud</label>
+              <input tabindex="19" id="nota" type="text" name="nota" autocomplete="off" placeholder="Agregue información adicional útil" class="col-xl-12 col-md-12" size="10" maxlength="6"/>
+              <input tabindex="20" type="submit" value="Guardar" name="BtnGuardar" class="btn-enviar col-xl-12 col-md-12""/>
             </div>
             </form>
       </div>
@@ -129,13 +133,13 @@
         <!-- Grid column -->
         <div class="col-md-6 mt-md-0 mt-3">
           <!-- Content -->
-          <h5 class="text-uppercase">Información</h5>
+          <h5 tabindex="21" class="text-uppercase white">Información</h5>
           <ul class="list-unstyled text-white-50">
-            <li>Docente: Jose Rafael Rojano Caceres</li>
-            <li>Experiencia Educativa: Tecnologías WEB</li>
-            <li>Integrantes: Alfredo Issac Ramirez Gonzalez, Andrés Zárate Rodriguez</li>
-            <li>Carrera: Tecnologías Computacionales</li>
-            <li>Universidad Veracruzana. Facultad de Estadística e Informática. 2022</li>
+            <li tabindex="22">Docente: Jose Rafael Rojano Caceres</li>
+            <li tabindex="23">Experiencia Educativa: Tecnologías WEB</li>
+            <li tabindex="24">Integrantes: Alfredo Issac Ramirez Gonzalez, Andrés Zárate Rodriguez</li>
+            <li tabindex="25">Carrera: Tecnologías Computacionales</li>
+            <li tabindex="26">Universidad Veracruzana. Facultad de Estadística e Informática. 2022</li>
           </ul>
         </div>
         <!-- Grid column -->
@@ -143,10 +147,10 @@
         <!-- Grid column -->
         <div class="col-md-6 mb-md-0 mb-3">
           <!-- Links -->
-          <h5 class="text-uppercase">Contáctanos</h5>
+          <h5 tabindex="27" class="text-uppercase white">Contáctanos</h5>
             <ul class="list-unstyled text-white-50">
-              <li>Número: 228XXXXXXX</li>
-              <li>Correos: zs20018225@estudiantes.uv.mx </li>
+              <li tabindex="28">Número: 228XXXXXXX</li>
+              <li tabindex="29">Correos: zs20018225@estudiantes.uv.mx </li>
             </ul>
         </div>
         <!-- Grid column -->
@@ -155,10 +159,12 @@
     </div>
     <!-- Footer Links -->
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">2022
+    <div class="footer-copyright white text-center py-3">2022
     <!-- <a class="cierre" href="cerrarSes.php">Cerrar Sesión</a> -->
     </div>
     <!-- Copyright -->
   </footer>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js\registrarNota.js"></script>
 </body>
 </html>

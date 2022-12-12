@@ -74,8 +74,8 @@ input{
   	text-align: center;
   	margin-bottom: 1em;
     margin-top: 1em;
-		background-color: #c8d4df;
-		color:black;
+		background-color: #560f2d;
+		color:white;
 		@include filter-gradient(#52bfc9, #c0d9dd, horizontal);
 		@include background-image(linear-gradient(left top, #52bfc9 0%, #53c9cd 56%, #c0d9dd 100%));
   }
@@ -153,8 +153,8 @@ input{
 }
 
 label{
-	font-family: cursive;
-	color:#4b4b4b;
+	/* font-family: cursive; */
+	color:white;
 	width: 33%;
 	text-align: center;
 }
@@ -187,4 +187,8 @@ label{
 	-webkit-transform:translateY(-50%) !important;
   	-ms-transform:translateY(-50%) !important;
   	transform:translateY(-50%) !important;
+}
+
+h5{
+	color: white;
 }
