@@ -16,7 +16,7 @@ var salonSeleccionado = seleccionSalon.options[seleccionSalon.selectedIndex].val
 
 var btnGuardar = document.getElementById("btnGuardar");
 btnGuardar.addEventListener("click", () => {
-    axios.post("http://localhost:4567/registrarNota", {
+    axios.post("https://uvrsrvr-production.up.railway.app/", {
         /*id: "1123712",
         nombre: "alfredo",
         matricula : "128u91u3yh",
@@ -39,4 +39,5 @@ btnGuardar.addEventListener("click", () => {
     .catch(function (error){
         console.log(error)
     })
+    window.location.reload();
 });
